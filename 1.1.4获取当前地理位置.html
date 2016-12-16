@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.1.4获取当前地理位置</title>
+</head>
+<body>
+    <script type="text/javascript">
+        window.addEventListener('load',function(){
+            //判断可否使用geolocation
+            if(navigator.geolocation){
+                //定期获取所在地
+                navigator.geolocation.watchPosition(update);
+            }
+        },false);
+
+        //取得位置
+        function update(position){
+            // 纬度
+            var lat = position.coords.latitude;;
+            // 经度
+            var lng = position.coords.longitude;
+            console.log(position);
+            // 把纬度和经度显示出来
+            document.write('纬度:'+lat+",经度:"+lng);
+        }
+    </script>
+</body>
+</html>

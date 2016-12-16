@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.3使用canvas标签绘制图形</title>
+</head>
+<body>
+    <canvas id="canvas" width='640' height="360">你的浏览器不支持canvas,请更新,或者使用别的浏览器</canvas>
+    <script type="text/javascript">
+        // 获取context对象
+        var canvas = document.getElementById("canvas");
+        if(canvas.getContext){
+            var ctx = canvas.getContext('2d');
+            //设置颜色
+            ctx.fillStyle = 'rgba(255,0,0,1)';
+            //从坐标(20,30)开始 , 画一个64*36大小的矩形
+            ctx.fillRect(20,30,64,36);
+        }
+    </script>
+</body>
+</html>
